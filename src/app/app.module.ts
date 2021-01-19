@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
