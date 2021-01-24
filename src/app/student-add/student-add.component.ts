@@ -7,7 +7,6 @@ import { formatDate } from '@angular/common';
   styleUrls: ['./student-add.component.scss']
 })
 export class StudentAddComponent implements OnInit {
-
   dataSubmitted: boolean = false;
 
   firstName: string = '';
