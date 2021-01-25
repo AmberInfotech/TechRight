@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentAddComponent } from './student-add/student-add.component';
-import { StudentListComponent } from './student-list/student-list.component';
-import { StudentDetailComponent } from './student-detail/student-detail.component';
-import { FormsModule } from '@angular/forms';
+import { StudentAddComponent } from './students/student-add/student-add.component';
+import { StudentListComponent } from './students/student-list/student-list.component';
+import { StudentDetailComponent } from './students/student-detail/student-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
+import { RegisterVolunteerComponent } from './volunteers/register-volunteer/register-volunteer.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,13 @@ import { EmployeeAddComponent } from './employees/employee-add/employee-add.comp
     StudentAddComponent,
     StudentListComponent,
     StudentDetailComponent,
-    EmployeeAddComponent
+    EmployeeAddComponent,
+    RegisterVolunteerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
