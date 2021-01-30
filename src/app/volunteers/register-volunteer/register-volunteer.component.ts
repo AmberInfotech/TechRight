@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-volunteer',
@@ -21,14 +21,26 @@ export class RegisterVolunteerComponent implements OnInit {
     // });
 
     this.registerForm = this.fb.group({
-      name: [''],
-      surname: [''],
-      phone: [''],
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
+      phone: ['', Validators.compose(
+        [ Validators.required, 
+          Validators.minLength(10),
+          Validators.maxLength(13)
+        ])],
       address: [''],
     });
   }
 
+  get f() {
+    return this.registerForm.controls;
+  }
+
   submitForm(f) {
+    if (this.registerForm.invalid) {
+      alert('Please fill all values');
+      return;
+    }
     console.log(f);
   }
 
