@@ -28,6 +28,20 @@
         </div>
         <!--Row 2-->
         <div class="row padding">
+            <div class="col-md-2">
+                <label for="emailAddress">Email</label>
+            </div>
+            <div class="col-md-4">
+                <input type="email" class="form-control" placeholder="Enter email" formControlName="emailAddress">
+                <div class="error" [hidden]="f.emailAddress.valid || f.emailAddress.pristine">
+                    <p *ngIf="f.emailAddress.errors?.required">Email Address is required</p>
+                    <p *ngIf="f.emailAddress.errors?.email">Email Address should be a valid email</p>
+                    <p *ngIf="f.emailAddress.errors?.maxlength">Email Address cannot exceed 150 characters</p>
+                </div>
+            </div>
+        </div>
+         <!--Row 3-->
+        <div class="row padding">
             <div class="col-sm-2">
                 <label for="phone">Phone Number</label>
             </div>
@@ -36,7 +50,7 @@
                 <div [hidden]="f.phone.valid || f.phone.pristine" class="error">
                     <p *ngIf="f.phone.errors?.required">Phone is required</p>
                     <p *ngIf="f.phone.errors?.minlength">Min length should be 10 characters</p>
-                    <p *ngIf="f.phone.errors?.maxlength" >Phone number cannot exceed 13 characters</p>
+                    <p *ngIf="f.phone.errors?.maxlength">Phone number cannot exceed 13 characters</p>
                 </div>
             </div>
             <div class="col-sm-2">
@@ -47,7 +61,9 @@
             </textarea>
             </div>
         </div>
-        <!--Row 3-->
+       
+        
+        <!--Row 4-->
         <div class="row padding">
             <div class="col-sm-2">
                 <button type="submit" class="btn btn-primary">Submit</button>

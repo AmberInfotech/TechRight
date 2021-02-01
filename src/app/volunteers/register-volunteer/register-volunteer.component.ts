@@ -29,6 +29,11 @@ export class RegisterVolunteerComponent implements OnInit {
           Validators.maxLength(13)
         ])],
       address: [''],
+      emailAddress:['', Validators.compose([
+        Validators.required,
+        Validators.email,
+        Validators.maxLength(150)
+      ])]
     });
   }
 
