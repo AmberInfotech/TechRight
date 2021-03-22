@@ -9,6 +9,7 @@ import { StudentDetailComponent } from './students/student-detail/student-detail
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
 import { RegisterVolunteerComponent } from './volunteers/register-volunteer/register-volunteer.component';
+import { AddDeptComponent } from './add-dept/add-dept.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegisterVolunteerComponent } from './volunteers/register-volunteer/regi
     StudentListComponent,
     StudentDetailComponent,
     EmployeeAddComponent,
-    RegisterVolunteerComponent
+    RegisterVolunteerComponent,
+    AddDeptComponent
   ],
   imports: [
     BrowserModule,
