@@ -16,8 +16,14 @@ export class AddDeptComponent implements OnInit {
 
   ngOnInit(): void {
     this.deptForm = this.fb.group({
-      deptName: ['', Validators.required, Validators.maxLength(50)]
+      deptName: ['', Validators.compose(
+        [Validators.required, Validators.maxLength(50)]
+      )]
     });
+  }
+
+  get f() {
+    return this.deptForm.controls;
   }
 
 }

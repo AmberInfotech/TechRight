@@ -1,7 +1,20 @@
+<h3 style="margin-top: 20px;margin-bottom: 20px;">Add Department</h3>
 <form [formGroup]="deptForm">
-    <label>Depratment Name</label>
-    <input type="text" name="deptName" formControlName="deptName" class="form-control">
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label>Department Name</label>
+            <input type="text" name="deptName" formControlName="deptName" placeholder="Enter department name"
+                class="form-control">
+            <div class="error" [hidden]="f.deptName.valid || f.deptName.pristine">
+               <p *ngIf="f.deptName.errors?.required">Department name is required</p>
+               <p *ngIf="f.deptName.errors?.maxlength">Department name cannot exceed 50 characters</p>
+            </div>
+        </div>
 
-
-    <button class="btn btn-primary" type="button">Submit</button>
+    </div>
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <button class="btn btn-primary" [disabled]="deptForm.invalid" type="button">Submit</button>
+        </div>
+    </div>
 </form>
