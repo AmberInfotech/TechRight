@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AddDeptComponent implements OnInit {
 
   deptForm: FormGroup;
+  deptName: string;
+  description: string;
 
   constructor(private fb: FormBuilder) {
 
@@ -16,9 +18,8 @@ export class AddDeptComponent implements OnInit {
 
   ngOnInit(): void {
     this.deptForm = this.fb.group({
-      deptName: ['', Validators.compose(
-        [Validators.required, Validators.maxLength(50)]
-      )]
+      deptName: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+      description: ['', Validators.compose([Validators.maxLength(500)])]
     });
   }
 
@@ -26,4 +27,8 @@ export class AddDeptComponent implements OnInit {
     return this.deptForm.controls;
   }
 
+  onSubmit(value) {
+    alert('Button was clicked');
+    console.log(value);
+  }
 }
