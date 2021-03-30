@@ -26,6 +26,16 @@
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
+                    <label>No of Employees</label>
+                    <input type="text" name="empCount" formControlName="empCount" placeholder="Enter Employee Count"
+                        class="form-control">
+                    <div class="error" [hidden]="f.empCount.valid || f.empCount.pristine">
+                        <p *ngIf="f.empCount.errors?.required">Employee Count is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
                     <button class="btn btn-primary" [disabled]="deptForm.invalid" type="submit">Submit</button>
                 </div>
             </div>
@@ -33,9 +43,12 @@
         <div class="col-md-6" style="background: #f4f4f4;padding: 20px;">
             <p class="text-muted">Here is the data:</p>
 
-            <strong>{{deptName}}</strong><br>
-            <span> {{description}} </span>
-
+            <strong>{{dept?.deptName}}</strong><br>
+            <span> {{dept?.description}} </span>
+            <br>
+            <p>
+                <strong>Employee Count</strong>: <span>{{dept?.empCount}}</span>
+            </p>
         </div>
     </div>
 </form>

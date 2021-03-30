@@ -9,7 +9,10 @@ import { StudentDetailComponent } from './students/student-detail/student-detail
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
 import { RegisterVolunteerComponent } from './volunteers/register-volunteer/register-volunteer.component';
-import { AddDeptComponent } from './add-dept/add-dept.component';
+import { AddDeptComponent } from './departments/add-dept/add-dept.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListDeptComponent } from './departments/list-dept/list-dept.component';
+import { ListEmployeeComponent } from './employees/list-employee/list-employee.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,16 @@ import { AddDeptComponent } from './add-dept/add-dept.component';
     StudentDetailComponent,
     EmployeeAddComponent,
     RegisterVolunteerComponent,
-    AddDeptComponent
+    AddDeptComponent,
+    ListDeptComponent,
+    ListEmployeeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
