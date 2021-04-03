@@ -13,6 +13,10 @@ import { AddDeptComponent } from './departments/add-dept/add-dept.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListDeptComponent } from './departments/list-dept/list-dept.component';
 import { ListEmployeeComponent } from './employees/list-employee/list-employee.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { RegisterComponent } from './authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ListEmployeeComponent } from './employees/list-employee/list-employee.c
     RegisterVolunteerComponent,
     AddDeptComponent,
     ListDeptComponent,
-    ListEmployeeComponent
+    ListEmployeeComponent,
+    LoginComponent,
+    AuthLayoutComponent,
+    AdminLayoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
