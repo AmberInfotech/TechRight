@@ -9,11 +9,8 @@ import { StudentDetailComponent } from './students/student-detail/student-detail
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
 import { RegisterVolunteerComponent } from './volunteers/register-volunteer/register-volunteer.component';
-import { AddDeptComponent } from './departments/add-dept/add-dept.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ListDeptComponent } from './departments/list-dept/list-dept.component';
 import { ListEmployeeComponent } from './employees/list-employee/list-employee.component';
-import { LoginComponent } from './authentication/login/login.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { RegisterComponent } from './authentication/register/register.component';
@@ -26,10 +23,7 @@ import { RegisterComponent } from './authentication/register/register.component'
     StudentDetailComponent,
     EmployeeAddComponent,
     RegisterVolunteerComponent,
-    AddDeptComponent,
-    ListDeptComponent,
     ListEmployeeComponent,
-    LoginComponent,
     AuthLayoutComponent,
     AdminLayoutComponent,
     RegisterComponent
