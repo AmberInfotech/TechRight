@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EmployeeAddComponent } from './employees/employee-add/employee-add.component';
-import { ListEmployeeComponent } from './employees/list-employee/list-employee.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
-import { StudentAddComponent } from './students/student-add/student-add.component';
-import { StudentListComponent } from './students/student-list/student-list.component';
-import { RegisterVolunteerComponent } from './volunteers/register-volunteer/register-volunteer.component';
 
 
 const routes: Routes = [

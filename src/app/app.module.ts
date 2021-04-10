@@ -13,7 +13,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListEmployeeComponent } from './employees/list-employee/list-employee.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
-import { RegisterComponent } from './authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { RegisterComponent } from './authentication/register/register.component'
     ListEmployeeComponent,
     AuthLayoutComponent,
     AdminLayoutComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
