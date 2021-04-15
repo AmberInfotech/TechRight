@@ -15,16 +15,14 @@ const routes: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,
-    children: [{
-      path: 'departments', loadChildren: () => import('./departments/departments.module').then(r => r.DepartmentModule)
-    }
+    children: [
+      { path: 'departments', loadChildren: () => import('./departments/departments.module').then(r => r.DepartmentModule), },
+      { path: 'employees', loadChildren: () => import('./employees/employee.module').then(r => r.EmployeeModule), }
     ]
   }
 
   // { path: 'students', component: StudentListComponent },
   // { path: 'students/add', component: StudentAddComponent },
-  // { path: 'employees/add', component: EmployeeAddComponent },
-  // { path: 'employees', component: ListEmployeeComponent },
   // { path: 'volunteer/register', component: RegisterVolunteerComponent },
 
 ];

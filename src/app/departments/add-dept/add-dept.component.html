@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-md-6 form-group">
                     <label>No of Employees</label>
-                    <input type="text" name="empCount" formControlName="empCount" placeholder="Enter Employee Count"
+                    <input type="text"  name="empCount" formControlName="empCount" placeholder="Enter Employee Count"
                         class="form-control">
                     <div class="error" [hidden]="f.empCount.valid || f.empCount.pristine">
                         <p *ngIf="f.empCount.errors?.required">Employee Count is required</p>
