@@ -17,14 +17,11 @@ const routes: Routes = [
     component: AdminLayoutComponent,
     children: [
       { path: 'departments', loadChildren: () => import('./departments/departments.module').then(r => r.DepartmentModule), },
-      { path: 'employees', loadChildren: () => import('./employees/employee.module').then(r => r.EmployeeModule), }
+      { path: 'employees', loadChildren: () => import('./employees/employee.module').then(r => r.EmployeeModule), },
+      { path: 'students', loadChildren: () => import('./students/student.module').then(r => r.StudentModule), }
     ]
   }
-
-  // { path: 'students', component: StudentListComponent },
-  // { path: 'students/add', component: StudentAddComponent },
   // { path: 'volunteer/register', component: RegisterVolunteerComponent },
-
 ];
 
 @NgModule({
